@@ -1,0 +1,2 @@
+# TwoListTableView
+1.一个页面两个tableView 点击第一个的cell刷新 第二个tableView(用了两种写法 第一种一个controller中两个tableView 第二种是一个controller里一个tabelView 另一个tableView通过controller的childView创建)   2.tableView 分割线左边短20像素问题   3.tableView 性能优化 heightForRowAtIndexPath方法里每次都要调用，可以在model(就是从接口拿到数据时)算好每个cell的高度，存入属性或数组，最后在方法里直接返回   若整个tableViewCell高度一样，可以在tableView初始化时 self.tableView.rowHeight = 50.f;  直接写出，避免每次都要调用，因为tableView这个方法有多少个Cell就走多少遍
